@@ -1,0 +1,587 @@
+{
+  "settings": {
+    "languages": [
+      "pt"
+    ],
+    "threshold": 0.2,
+    "autoLoad": false,
+    "autoSave": false,
+    "modelFileName": "treined.nlp",
+    "tag": "nlp"
+  },
+  "nluManager": {
+    "settings": {
+      "tag": "nlu-manager"
+    },
+    "locales": [
+      "pt"
+    ],
+    "languageNames": {},
+    "domainManagers": {
+      "pt": {
+        "settings": {
+          "locale": "pt",
+          "tag": "domain-manager-pt",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "trainByDomain": false,
+          "useStemDict": true
+        },
+        "stemDict": {
+          "oi": {
+            "intent": "saudacao",
+            "domain": "default"
+          },
+          "ola": {
+            "intent": "saudacao",
+            "domain": "default"
+          },
+          "assist,de,eu,o,quer,trail,ultimat,vingador": {
+            "intent": "youtube",
+            "domain": "default"
+          },
+          "assist,canal,davy,do,eu,jon,o,quer": {
+            "intent": "youtube",
+            "domain": "default"
+          },
+          "agu,assist,eu,quer,sobr,um,vid": {
+            "intent": "youtube",
+            "domain": "default"
+          },
+          "carr,documentari,quer,sobr,um,ver": {
+            "intent": "youtube",
+            "domain": "default"
+          },
+          "com,desnh,eu,nankin,quer,sobr,tutorial,um,ver": {
+            "intent": "youtube",
+            "domain": "default"
+          },
+          "assist,eu,pesc,quer,reportag,sobr,uma": {
+            "intent": "youtube",
+            "domain": "default"
+          },
+          "de,do,dos,especial,eu,fund,gost,natal,o,port,ver": {
+            "intent": "youtube",
+            "domain": "default"
+          },
+          "assist,de,eu,film,gost,terror,um": {
+            "intent": "youtube",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "saudacao": "default",
+          "youtube": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "Oi",
+            "intent": "saudacao"
+          },
+          {
+            "domain": "default",
+            "utterance": "Olá",
+            "intent": "saudacao"
+          },
+          {
+            "domain": "default",
+            "utterance": "Eu quero assistir o trailer de Vingadores Ultimato",
+            "intent": "youtube"
+          },
+          {
+            "domain": "default",
+            "utterance": "Eu quero assistir o canal do Davy Jones",
+            "intent": "youtube"
+          },
+          {
+            "domain": "default",
+            "utterance": "Eu quero assistir um vídeo sobre águias",
+            "intent": "youtube"
+          },
+          {
+            "domain": "default",
+            "utterance": "Quero ver um documentário sobre carros",
+            "intent": "youtube"
+          },
+          {
+            "domain": "default",
+            "utterance": "Eu quero ver um tutorial sobre como desnhar com nankin",
+            "intent": "youtube"
+          },
+          {
+            "domain": "default",
+            "utterance": "Eu quero assistir uma reportagem sobre pesca",
+            "intent": "youtube"
+          },
+          {
+            "domain": "default",
+            "utterance": "Eu gostaria de ver o especial de natal do porta dos fundos",
+            "intent": "youtube"
+          },
+          {
+            "domain": "default",
+            "utterance": "Eu gostaria de assistir um filme de terror",
+            "intent": "youtube"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "pt",
+              "tag": "nlu-pt",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "oi": 1,
+              "ola": 1,
+              "eu": 1,
+              "quer": 1,
+              "assist": 1,
+              "o": 1,
+              "trail": 1,
+              "de": 1,
+              "vingador": 1,
+              "ultimat": 1,
+              "canal": 1,
+              "do": 1,
+              "davy": 1,
+              "jon": 1,
+              "um": 1,
+              "vid": 1,
+              "sobr": 1,
+              "agu": 1,
+              "ver": 1,
+              "documentari": 1,
+              "carr": 1,
+              "tutorial": 1,
+              "com": 1,
+              "desnh": 1,
+              "nankin": 1,
+              "uma": 1,
+              "reportag": 1,
+              "pesc": 1,
+              "gost": 1,
+              "especial": 1,
+              "natal": 1,
+              "port": 1,
+              "dos": 1,
+              "fund": 1,
+              "film": 1,
+              "terror": 1
+            },
+            "intents": {
+              "saudacao": 1,
+              "youtube": 1
+            },
+            "intentFeatures": {
+              "saudacao": [
+                "oi",
+                "ola"
+              ],
+              "youtube": [
+                "eu",
+                "quer",
+                "assist",
+                "o",
+                "trail",
+                "de",
+                "vingador",
+                "ultimat",
+                "canal",
+                "do",
+                "davy",
+                "jon",
+                "um",
+                "vid",
+                "sobr",
+                "agu",
+                "ver",
+                "documentari",
+                "carr",
+                "tutorial",
+                "com",
+                "desnh",
+                "nankin",
+                "uma",
+                "reportag",
+                "pesc",
+                "gost",
+                "especial",
+                "natal",
+                "port",
+                "dos",
+                "fund",
+                "film",
+                "terror"
+              ]
+            },
+            "featuresToIntent": {
+              "oi": [
+                "saudacao"
+              ],
+              "ola": [
+                "saudacao"
+              ],
+              "eu": [
+                "youtube"
+              ],
+              "quer": [
+                "youtube"
+              ],
+              "assist": [
+                "youtube"
+              ],
+              "o": [
+                "youtube"
+              ],
+              "trail": [
+                "youtube"
+              ],
+              "de": [
+                "youtube"
+              ],
+              "vingador": [
+                "youtube"
+              ],
+              "ultimat": [
+                "youtube"
+              ],
+              "canal": [
+                "youtube"
+              ],
+              "do": [
+                "youtube"
+              ],
+              "davy": [
+                "youtube"
+              ],
+              "jon": [
+                "youtube"
+              ],
+              "um": [
+                "youtube"
+              ],
+              "vid": [
+                "youtube"
+              ],
+              "sobr": [
+                "youtube"
+              ],
+              "agu": [
+                "youtube"
+              ],
+              "ver": [
+                "youtube"
+              ],
+              "documentari": [
+                "youtube"
+              ],
+              "carr": [
+                "youtube"
+              ],
+              "tutorial": [
+                "youtube"
+              ],
+              "com": [
+                "youtube"
+              ],
+              "desnh": [
+                "youtube"
+              ],
+              "nankin": [
+                "youtube"
+              ],
+              "uma": [
+                "youtube"
+              ],
+              "reportag": [
+                "youtube"
+              ],
+              "pesc": [
+                "youtube"
+              ],
+              "gost": [
+                "youtube"
+              ],
+              "especial": [
+                "youtube"
+              ],
+              "natal": [
+                "youtube"
+              ],
+              "port": [
+                "youtube"
+              ],
+              "dos": [
+                "youtube"
+              ],
+              "fund": [
+                "youtube"
+              ],
+              "film": [
+                "youtube"
+              ],
+              "terror": [
+                "youtube"
+              ]
+            },
+            "neuralNetwork": {
+              "features": [
+                "oi",
+                "ola",
+                "eu",
+                "quer",
+                "assist",
+                "o",
+                "trail",
+                "de",
+                "vingador",
+                "ultimat",
+                "canal",
+                "do",
+                "davy",
+                "jon",
+                "um",
+                "vid",
+                "sobr",
+                "agu",
+                "ver",
+                "documentari",
+                "carr",
+                "tutorial",
+                "com",
+                "desnh",
+                "nankin",
+                "uma",
+                "reportag",
+                "pesc",
+                "gost",
+                "especial",
+                "natal",
+                "port",
+                "dos",
+                "fund",
+                "film",
+                "terror",
+                "nonefeature"
+              ],
+              "intents": [
+                "saudacao",
+                "youtube",
+                "None"
+              ],
+              "perceptrons": [
+                [
+                  7.705445766448975,
+                  7.706882953643799,
+                  -1.1526463031768799,
+                  -1.1834145784378052,
+                  -0.928330659866333,
+                  -0.509314775466919,
+                  -0.1527630090713501,
+                  -0.614145815372467,
+                  -0.1527630090713501,
+                  -0.1527630090713501,
+                  -0.18289120495319366,
+                  -0.3565519154071808,
+                  -0.18289120495319366,
+                  -0.18289120495319366,
+                  -0.9466093182563782,
+                  -0.11608036607503891,
+                  -0.847760796546936,
+                  -0.11608036607503891,
+                  -0.7164671421051025,
+                  -0.49215126037597656,
+                  -0.49215126037597656,
+                  -0.05065518617630005,
+                  -0.05065518617630005,
+                  -0.05065518617630005,
+                  -0.05065518617630005,
+                  -0.18887367844581604,
+                  -0.18887367844581604,
+                  -0.18887367844581604,
+                  -0.461383193731308,
+                  -0.1736607402563095,
+                  -0.1736607402563095,
+                  -0.1736607402563095,
+                  -0.1736607402563095,
+                  -0.1736607402563095,
+                  -0.2877223789691925,
+                  -0.2877223789691925,
+                  -4.432048320770264,
+                  4.662809620979617
+                ],
+                [
+                  -0.8210878372192383,
+                  -0.8182775974273682,
+                  2.6918134689331055,
+                  2.848137378692627,
+                  2.250412940979004,
+                  1.2894834280014038,
+                  0.3349170982837677,
+                  1.594283938407898,
+                  0.3349170982837677,
+                  0.3349170982837677,
+                  0.5481236577033997,
+                  0.954565703868866,
+                  0.5481236577033997,
+                  0.5481236577033997,
+                  2.176926374435425,
+                  -0.12664885818958282,
+                  1.965097188949585,
+                  -0.12664885818958282,
+                  1.8570939302444458,
+                  1.4156925678253174,
+                  1.4156925678253174,
+                  0.03495870158076286,
+                  0.03495870158076286,
+                  0.03495870158076286,
+                  0.03495870158076286,
+                  0.6410953402519226,
+                  0.6410953402519226,
+                  0.6410953402519226,
+                  1.2593662738800049,
+                  0.406442254781723,
+                  0.406442254781723,
+                  0.406442254781723,
+                  0.406442254781723,
+                  0.406442254781723,
+                  0.8529244661331177,
+                  0.8529244661331177,
+                  -0.8256174325942993,
+                  0.8212652560232552
+                ],
+                [
+                  -2.2156922817230225,
+                  -2.1943700313568115,
+                  -0.5702677369117737,
+                  -0.5852707624435425,
+                  -0.4604707658290863,
+                  -0.25118473172187805,
+                  -0.0711270421743393,
+                  -0.30320367217063904,
+                  -0.0711270421743393,
+                  -0.0711270421743393,
+                  -0.09338626265525818,
+                  -0.18005773425102234,
+                  -0.09338626265525818,
+                  -0.09338626265525818,
+                  -0.4694462716579437,
+                  -0.05383618548512459,
+                  -0.4207574129104614,
+                  -0.05383618548512459,
+                  -0.3568764925003052,
+                  -0.24707961082458496,
+                  -0.24707961082458496,
+                  -0.023125307634472847,
+                  -0.023125307634472847,
+                  -0.023125307634472847,
+                  -0.023125307634472847,
+                  -0.09671622514724731,
+                  -0.09671622514724731,
+                  -0.09671622514724731,
+                  -0.23207655549049377,
+                  -0.08667147159576416,
+                  -0.08667147159576416,
+                  -0.08667147159576416,
+                  -0.08667147159576416,
+                  -0.08667147159576416,
+                  -0.1454050987958908,
+                  -0.1454050987958908,
+                  9.896642684936523,
+                  2.342490016658721
+                ]
+              ],
+              "perceptronSettings": {
+                "locale": "pt",
+                "tag": "nlu-pt",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              }
+            }
+          }
+        }
+      }
+    },
+    "intentDomains": {},
+    "extraSentences": [
+      [
+        "pt",
+        "Oi"
+      ],
+      [
+        "pt",
+        "Olá"
+      ],
+      [
+        "pt",
+        "Eu quero assistir o trailer de Vingadores Ultimato"
+      ],
+      [
+        "pt",
+        "Eu quero assistir o canal do Davy Jones"
+      ],
+      [
+        "pt",
+        "Eu quero assistir um vídeo sobre águias"
+      ],
+      [
+        "pt",
+        "Quero ver um documentário sobre carros"
+      ],
+      [
+        "pt",
+        "Eu quero ver um tutorial sobre como desnhar com nankin"
+      ],
+      [
+        "pt",
+        "Eu quero assistir uma reportagem sobre pesca"
+      ],
+      [
+        "pt",
+        "Eu gostaria de ver o especial de natal do porta dos fundos"
+      ],
+      [
+        "pt",
+        "Eu gostaria de assistir um filme de terror"
+      ]
+    ]
+  },
+  "ner": {
+    "settings": {
+      "tag": "ner",
+      "entityPreffix": "%",
+      "entitySuffix": "%"
+    },
+    "rules": {}
+  },
+  "nlgManager": {
+    "settings": {
+      "tag": "nlg-manager"
+    },
+    "responses": {}
+  },
+  "actionManager": {
+    "settings": {
+      "tag": "action-manager"
+    },
+    "actions": {}
+  },
+  "slotManager": {}
+}

@@ -1,0 +1,93 @@
+{
+  "intents": [
+    {
+      "tag": "saudacao",
+      "examples": [
+        {
+          "text": "Oi"
+        },
+        {
+          "text": "Olá"
+        }
+      ]
+    },
+    {
+      "tag": "youtube",
+      "examples": [
+        {
+          "text": "Eu quero assistir o trailer de Vingadores Ultimato"
+        },
+        {
+          "text": "Eu quero assistir o canal do Davy Jones"
+        },
+        {
+          "text": "Eu quero assistir um vídeo sobre águias"
+        },
+        {
+          "text": "Quero ver um documentário sobre carros"
+        },
+        {
+          "text": "Eu quero ver um tutorial sobre como desnhar com nankin"
+        },
+        {
+          "text": "Eu quero assistir uma reportagem sobre pesca"
+        },
+        {
+          "text": "Eu gostaria de ver o especial de natal do porta dos fundos"
+        },
+        {
+          "text": "Eu gostaria de assistir um filme de terror"
+        }
+      ]
+    }
+  ],
+  "dialogs": [
+    {
+      "intent": "saudacao",
+      "output": [
+        {
+          "type": "text",
+          "values": ["Oi", "Olá!"]
+        }
+      ],
+      "context": {},
+      "extract_entities": false,
+      "entities": []
+    },
+    {
+      "intent": "youtube",
+      "output": [
+        {
+          "type": "text",
+          "values": ["Aqui está", "Encontrei esse vídeo aqui"]
+        }
+      ],
+      "context": {},
+      "extract_entities": true,
+      "entities": []
+    },
+    {
+      "intent": "None",
+      "output": [
+        {
+          "type": "text",
+          "values": [
+            "Eu não entendi oque quis dizer",
+            "Não consegui entender oque você falou",
+            "Desculpe, mas não entendi"
+          ]
+        },
+        {
+          "type": "image",
+          "values": [
+            "https://www.imagemteste1.com",
+            "https://www.imagemteste2.com"
+          ]
+        }
+      ],
+      "context": {},
+      "extract_entities": false,
+      "entities": []
+    }
+  ]
+}
